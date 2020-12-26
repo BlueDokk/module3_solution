@@ -7,29 +7,59 @@
     color: black;
 }
 
+.container.fluid{
+    width: 100%;
+    padding: 0;
+    margin:0;
+}
+
 .navbar button.navbar-toggler {
     border: 2px solid black !important;
+    background-color: gray;
     width: 50px;
     height: 50px;
+    margin-bottom: 5px;
     padding: 0;
-    margin: 0 3% 5px 0;
+    
 }
+
 
 .navbar .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
+
+.navbar .navbar-toggler-icon:active, .navbar .navbar-toggler-icon:hover, .navbar .navbar-toggler-icon:focus {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+.navbar button.navbar-toggler:hover,.navbar button.navbar-toggler:focus{
+    border: 2px solid rgb(255, 255, 255) !important;
+    background-color: rgb(163, 162, 162);
+    box-shadow: 0;
+    transition: width 2s, height 4s;
+    
+}
+
 
 
 #header-nav {
     background-color: gray;
     border-radius: 0;
     border: 2px solid black;
+    padding-bottom:0;
     margin-bottom: 20px;
-    padding: 10px 0px 10px 0px;
+
 }
 
-.container-fluid {
-    padding: 0;
+.navbar-brand {
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-bottom:10px;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+    text-decoration: none;
 }
 
 .navbar-brand a{
@@ -38,25 +68,27 @@
 
 .navbar-brand h2 {
     line-height: .75;
+    margin-top:0;
+    margin-bottom:0;
     margin-left: 15px;
     font-size: 1.5em;
     font-weight: bold;
     line-height: .85;
-    padding-top: 3px;
-    padding-left: 40px;
 }
 
-#nav-list li a {
+
+
+#nav-list .nav-item a {
     color:#000;
     font-weight: 600;
+    font-size: 1.2em;
+    padding: 15px;
     line-height: 8px;
     background-color: white;
     border: 1px solid black;
 }
 
-.navbar-brand a:hover, .navbar-brand a:focus {
-    text-decoration: none;
-}
+
 
 #header-title{
     margin-bottom: 20px;
@@ -65,8 +97,11 @@
 }
 
 div>article {
-    padding: 0 20px 20px;
+    padding: 0 10px 10px;
     background-color: gray ;
+    width: 100%;
+    margin-left: auto;
+    margin-right:auto;
     border: 0;
 }
 
@@ -80,8 +115,10 @@ article h2{
     font-weight: bold;
 }
 
-@media (max-width:767px) {
-    .navbar-brand h2 {
-        padding-left: 15px;
+@media (max-width:767px){
+
+    div>article{
+        width: 85%;
     }
+    
 }
